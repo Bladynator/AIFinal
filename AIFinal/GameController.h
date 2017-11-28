@@ -23,4 +23,6 @@ public:
 
 private:
 	static GameController* instance;
+	static GameWorld* world;
+	static CollisionDetection* collision;
 };

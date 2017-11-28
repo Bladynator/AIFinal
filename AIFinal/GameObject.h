@@ -5,7 +5,9 @@ public:
 	GameObject();
 	~GameObject();
 	bool isActive = true;
-	void Update();
-	void Draw();
+	virtual void Update();
+	virtual void Draw();
+	virtual void HandleEvent();
+	virtual void OnCollision(GameObject other);
 };
 

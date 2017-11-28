@@ -1,9 +1,12 @@
 #include "stdafx.h"
 #include "GameController.h"
-
+#include "CollisionDetection.h"
+#include "GameWorld.h"
 
 GameController::GameController()
 {
+	// make collision object
+	// make gameworld
 }
 
 
@@ -20,6 +23,12 @@ void GameController::Update()
 			allObjects[i].Update();
 		}
 	}
+
+	// check all Collisions
+
+
+	// update/scroll gameworld
+	
 }
 
 void GameController::Draw()
