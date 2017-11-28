@@ -3,6 +3,10 @@
 
 #include "stdafx.h"
 #include "AIFinal.h"
+#include "SFML\Graphics.hpp"
+#include "SFML\Main.hpp"
+#include "SFML\System.hpp"
+#include "SFML\Window.hpp"
 
 #define MAX_LOADSTRING 100
 
