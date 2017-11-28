@@ -4,10 +4,11 @@
 
 GameObject::GameObject()
 {
-	//GameController.GetInstance();
+	GameController::GetInstance()->allObjects.push_back(*this);
 }
 
 
 GameObject::~GameObject()
 {
+	
 }
