@@ -10,7 +10,12 @@ public:
 
 	}
 	~Missle();
+
+	float xPos = 0;
+	float yPos = 0;
+	float speed = 0.1f;
 	float velocity;
+	float direction;
 
 	void Destroy();
 	void Update();

@@ -6,11 +6,21 @@ Player::~Player()
 {
 }
 
-void Player::Shoot() {
-	
+void Player::Shoot() 
+{
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && !keyIsPressed)
+	{
+		GameController::GetInstance()->GetPool()->GetPlayerMissle(sf::Vector2f(xPos, yPos), orientation);
+		keyIsPressed = true;
+	}
+	if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+	{
+		keyIsPressed = false;
+	}
 }
 
-void Player::Movement() {
+void Player::Movement() 
+{
 	// Move Ship
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 		yVel += -velocityIncreasePlayer;
@@ -41,6 +51,8 @@ void Player::Movement() {
 	shape.setRotation(orientation);
 }
 
-void Player::Update() {
+void Player::Update() 
+{
 	Movement();
+	Shoot();
 }
