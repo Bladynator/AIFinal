@@ -1,4 +1,5 @@
-#pragma once
+#ifndef OBJECT_POOL_H
+#define OBJECT_POOL_H
 class ObjectPool
 {
 public:
@@ -6,3 +7,4 @@ public:
 	~ObjectPool();
 };
 
+#endif // !OBJECT_POOL_H

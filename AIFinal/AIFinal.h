@@ -1,3 +1,6 @@
-#pragma once
+#ifndef AI_FINAL_H
+#define AI_FINAL_H
 
-#include "resource.h"
+#include "GameController.h"
+
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef GAME_OBJECT_H
+#define GAME_OBJECT_H
 class GameObject
 {
 public:
@@ -11,3 +12,4 @@ public:
 	virtual void OnCollision(GameObject other);
 };
 
+#endif // !GAME_OBJECT_H

@@ -1,12 +1,17 @@
-#include "stdafx.h"
 #include "GameController.h"
 #include "CollisionDetection.h"
 #include "GameWorld.h"
+
+GameController* GameController::instance;
+
 
 GameController::GameController()
 {
 	// make collision object
 	// make gameworld
+
+
+
 }
 
 

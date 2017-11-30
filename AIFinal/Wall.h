@@ -1,10 +1,16 @@
-#pragma once
+#ifndef WALL_H
+#define WALL_H
 #include "GameObject.h"
 
-class Wall : GameObject
+class Wall : public GameObject
 {
 public:
 	Wall();
 	~Wall();
 };
+
+
+
+#endif // !WALL_H
+
 

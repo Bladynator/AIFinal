@@ -1,7 +1,9 @@
-#pragma once
+#ifndef PREDATOR_H
+#define PREDATOR_H
+
 #include "NPC.h"
 
-class Preditor : NPC
+class Preditor : public NPC
 {
 public:
 	Preditor();
@@ -13,3 +15,4 @@ public:
 	void CreatePreditor();
 };
 
+#endif

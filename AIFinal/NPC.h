@@ -1,7 +1,8 @@
-#pragma once
+#ifndef NPC_H
+#define NPC_H
 #include "GameObject.h"
 
-class NPC : GameObject
+class NPC : public GameObject
 {
 public:
 	NPC();
@@ -10,7 +11,10 @@ public:
 	int health;
 	bool isDead;
 
-	void Update() override;
-	void Die();
+	virtual void Update();
+	virtual void Die();
 };
+
+
+#endif // !NPC_H
 

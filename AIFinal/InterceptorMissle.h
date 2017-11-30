@@ -1,7 +1,8 @@
-#pragma once
+#ifndef INTERCEPTOR_MISSLE_H
+#define INTERCEPTOR_MISSLE_H
 #include "Missle.h"
 
-class InterceptorMissle : Missle
+class InterceptorMissle : public Missle
 {
 public:
 	InterceptorMissle();
@@ -11,3 +12,4 @@ public:
 	void SeekPlayer();
 };
 
+#endif // !INTERCEPTOR_MISSLE_H

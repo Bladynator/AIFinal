@@ -1,7 +1,8 @@
-#pragma once
+#ifndef MISSLE_H
+#define MISSLE_H
 #include "GameObject.h"
 
-class Missle : GameObject
+class Missle : public GameObject
 {
 public:
 	Missle();
@@ -9,6 +10,7 @@ public:
 	float velocity;
 
 	void Destroy();
-	void Update() override;
+	void Update();
 };
 
+#endif // !MISSLE_H

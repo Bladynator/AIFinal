@@ -1,8 +1,11 @@
-#pragma once
+#ifndef GAME_CONTROLLER_H
+#define GAME_CONTROLLER_H
 #include <iostream>
 #include <vector>
 #include <list>
 #include "GameObject.h"
+#include "GameWorld.h"
+#include "CollisionDetection.h"
 
 using namespace std;
 
@@ -25,4 +28,8 @@ private:
 	static GameController* instance;
 	static GameWorld* world;
 	static CollisionDetection* collision;
+
 };
+
+#endif // !GAME_CONTROLLER_H
+

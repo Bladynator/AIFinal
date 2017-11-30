@@ -1,7 +1,9 @@
-#pragma once
+#ifndef SWEEPER_BOID_H
+#define SWEEPER_BOID_H
+
 #include "NPC.h"
 
-class SweeperBoid : NPC
+class SweeperBoid : public NPC
 {
 public:
 	SweeperBoid();
@@ -9,7 +11,10 @@ public:
 	int workersKidnapped;
 	float velocity;
 
+
+
 	void Wander();
 	void SeekWorker();
 };
 
+#endif

@@ -1,7 +1,8 @@
-#pragma once
+#ifndef WORKER_H
+#define WORKER_H
 #include "NPC.h"
 
-class Worker : NPC
+class Worker : public NPC
 {
 public:
 	Worker();
@@ -11,3 +12,4 @@ public:
 	void Wander();
 };
 
+#endif // !WORKER_H

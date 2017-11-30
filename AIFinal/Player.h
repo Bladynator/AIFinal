@@ -1,7 +1,9 @@
-#pragma once
+#ifndef PLAYER_H
+#define PLAYER_H
+
 #include "GameObject.h"
 
-class Player : GameObject
+class Player : public GameObject
 {
 public:
 	Player();
@@ -15,4 +17,7 @@ public:
 	void Movement();
 	void Update() override;
 };
+
+#endif // !PLAYER_H
+
 
