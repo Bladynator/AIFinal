@@ -1,10 +1,9 @@
 #include "GameController.h"
-#include "CollisionDetection.h"
-#include "GameWorld.h"
 #include "Player.h"
 
-GameController* GameController::instance;
 
+GameController* GameController::instance;
+ObjectPool* GameController::objectPool;
 
 GameController::GameController()
 {
@@ -12,13 +11,12 @@ GameController::GameController()
 	// make gameworld
 	instance = this;
 	Player* player = new Player("ship.png", sf::Vector2f(75,50), sf::Vector2f(50,50));
-	
-
+	objectPool = new ObjectPool();
 }
 
 void GameController::Update()
 {
-	for (int i = 0; i < allObjects.size(); i++)
+	for (unsigned int i = 0; i < allObjects.size(); i++)
 	{
 		if (allObjects[i]->isActive)
 		{
@@ -35,7 +33,7 @@ void GameController::Update()
 
 void GameController::Draw(sf::RenderWindow &window)
 {
-	for (int i = 0; i < allObjects.size(); i++)
+	for (unsigned int i = 0; i < allObjects.size(); i++)
 	{
 		if (allObjects[i]->isActive)
 		{
