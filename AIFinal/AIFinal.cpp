@@ -8,7 +8,7 @@
 int main()
 {
 	sf::RenderWindow window(sf::VideoMode(800, 600), "SpaceSavers");
-	GameController * gameController = GameController::GetInstance();
+	GameController * gameController = new GameController();
 
 	while (window.isOpen())
 	{
@@ -22,7 +22,7 @@ int main()
 		}
 		gameController->Update();
 		window.clear(sf::Color::Black);
-		gameController->Draw();
+		gameController->Draw(window);
 		window.display();
 	}
 	

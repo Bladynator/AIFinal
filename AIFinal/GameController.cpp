@@ -1,6 +1,7 @@
 #include "GameController.h"
 #include "CollisionDetection.h"
 #include "GameWorld.h"
+#include "Player.h"
 
 GameController* GameController::instance;
 
@@ -9,23 +10,19 @@ GameController::GameController()
 {
 	// make collision object
 	// make gameworld
+	instance = this;
+	Player* player = new Player();
+	
 
-
-
-}
-
-
-GameController::~GameController()
-{
 }
 
 void GameController::Update()
 {
 	for (int i = 0; i < allObjects.size(); i++)
 	{
-		if (allObjects[i].isActive)
+		if (allObjects[i]->isActive)
 		{
-			allObjects[i].Update();
+			allObjects[i]->Update();
 		}
 	}
 
@@ -36,13 +33,13 @@ void GameController::Update()
 	
 }
 
-void GameController::Draw()
+void GameController::Draw(sf::RenderWindow &window)
 {
 	for (int i = 0; i < allObjects.size(); i++)
 	{
-		if (allObjects[i].isActive)
+		if (allObjects[i]->isActive)
 		{
-			allObjects[i].Draw();
+			allObjects[i]->Draw(window);
 		}
 	}
 }

@@ -13,18 +13,18 @@ class GameController
 {
 public:
 	GameController();
-	~GameController();
-	vector<GameObject> &allObjects = vector<GameObject>();
+	vector<GameObject*> allObjects = vector<GameObject*>();
 	static GameController* GetInstance()
 	{
-		if (!instance)
-			instance = new GameController();
+		/*if (!instance)
+			instance = new GameController();*/
 		return instance;
 	}
 	void Update();
-	void Draw();
+	void Draw(sf::RenderWindow &window);
 
 private:
+	
 	static GameController* instance;
 	static GameWorld* world;
 	static CollisionDetection* collision;
