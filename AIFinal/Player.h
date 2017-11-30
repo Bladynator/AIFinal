@@ -6,7 +6,10 @@
 class Player : public GameObject
 {
 public:
-	Player();
+	Player(sf::String textureName, sf::Vector2f size, sf::Vector2f spawnLocation) : GameObject(textureName, size, spawnLocation)
+	{
+		
+	}
 	~Player();
 	float velocity;
 	int workersSaved = 0;

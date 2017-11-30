@@ -5,7 +5,10 @@
 class Missle : public GameObject
 {
 public:
-	Missle();
+	Missle(sf::String textureName, sf::Vector2f size, sf::Vector2f spawnLocation) : GameObject(textureName, size, spawnLocation)
+	{
+
+	}
 	~Missle();
 	float velocity;
 

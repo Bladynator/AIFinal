@@ -6,7 +6,10 @@
 class Preditor : public NPC
 {
 public:
-	Preditor();
+	Preditor(sf::String textureName, sf::Vector2f size, sf::Vector2f spawnLocation) : NPC(textureName, size, spawnLocation)
+	{
+
+	}
 	~Preditor();
 	bool hasMissleSpawned;
 	int maxPreditors;

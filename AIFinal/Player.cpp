@@ -1,19 +1,6 @@
 #include "Player.h"
 
 
-Player::Player()
-{
-	sf::Vector2f rectSize;
-	rectSize.x = 75;
-	rectSize.y = 50;
-	shape.setSize(rectSize);
-	shape.move(sf::Vector2f(50, 50));
-	if (!texture.loadFromFile("ship.png"))
-		std::cout << "error";
-	shape.setTexture(&texture, false);
-	shape.setOrigin(shape.getLocalBounds().width / 2, shape.getLocalBounds().height / 2);
-}
-
 
 Player::~Player()
 {

@@ -11,7 +11,7 @@ GameController::GameController()
 	// make collision object
 	// make gameworld
 	instance = this;
-	Player* player = new Player();
+	Player* player = new Player("ship.png", sf::Vector2f(75,50), sf::Vector2f(50,50));
 	
 
 }

@@ -5,7 +5,10 @@
 class Nest : public NPC
 {
 public:
-	Nest();
+	Nest(sf::String textureName, sf::Vector2f size, sf::Vector2f spawnLocation) : NPC(textureName, size, spawnLocation)
+	{
+
+	}
 	~Nest();
 };
 

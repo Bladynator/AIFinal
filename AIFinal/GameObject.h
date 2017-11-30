@@ -6,6 +6,7 @@
 class GameObject
 {
 public:
+	GameObject(sf::String textureName, sf::Vector2f size, sf::Vector2f spawnLocation);
 	GameObject();
 	~GameObject();
 	bool isActive = true;
