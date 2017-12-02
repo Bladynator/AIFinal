@@ -1,5 +1,4 @@
-#ifndef GAME_CONTROLLER_H
-#define GAME_CONTROLLER_H
+#pragma once
 #include <iostream>
 #include <vector>
 #include <list>
@@ -40,6 +39,4 @@ private:
 	static ObjectPool* objectPool;
 
 };
-
-#endif // !GAME_CONTROLLER_H
 

@@ -1,6 +1,4 @@
-#ifndef PLAYER_H
-#define PLAYER_H
-
+#pragma once
 #include "GameObject.h"
 #include "GameController.h"
 #include "PlayerMissle.h"
@@ -40,7 +38,5 @@ public:
 private:
 	
 };
-
-#endif // !PLAYER_H
 
 

@@ -1,6 +1,4 @@
-#ifndef SWEEPER_BOID_H
-#define SWEEPER_BOID_H
-
+#pragma once
 #include "NPC.h"
 
 class SweeperBoid : public NPC
@@ -19,5 +17,3 @@ public:
 	void Wander();
 	void SeekWorker();
 };
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef WORKER_H
-#define WORKER_H
+#pragma once
 #include "NPC.h"
 
 class Worker : public NPC
@@ -14,5 +13,3 @@ public:
 	float velocity;
 	void Wander();
 };
-
-#endif // !WORKER_H

@@ -1,5 +1,4 @@
-#ifndef MISSLE_H
-#define MISSLE_H
+#pragma once
 #include "GameObject.h"
 
 class Missle : public GameObject
@@ -20,5 +19,3 @@ public:
 	void Destroy();
 	void Update();
 };
-
-#endif // !MISSLE_H

@@ -1,5 +1,4 @@
-#ifndef NEST_H
-#define NEST_H
+#pragma once
 #include "NPC.h"
 
 class Nest : public NPC
@@ -11,8 +10,6 @@ public:
 	}
 	~Nest();
 };
-
-#endif // !NEST_H
 
 
 

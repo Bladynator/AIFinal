@@ -1,5 +1,4 @@
-#ifndef NPC_H
-#define NPC_H
+#pragma once
 #include "GameObject.h"
 
 class NPC : public GameObject
@@ -18,6 +17,4 @@ public:
 	virtual void Die();
 };
 
-
-#endif // !NPC_H
 

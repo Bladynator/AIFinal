@@ -1,5 +1,4 @@
-#ifndef PREDATOR_H
-#define PREDATOR_H
+#pragma once
 
 #include "NPC.h"
 
@@ -17,5 +16,3 @@ public:
 	void CreateMissle();
 	void CreatePreditor();
 };
-
-#endif

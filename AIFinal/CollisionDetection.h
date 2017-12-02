@@ -1,5 +1,4 @@
-#ifndef COLLISION_DETECTION_H
-#define COLLISION_DETECTION_H
+#pragma once
 #include "GameObject.h"
 
 class CollisionDetection
@@ -14,7 +13,6 @@ public:
 	void CircleBoxTest(GameObject object1, GameObject object2);
 };
 
-#endif // !COLLISION_DETECTION_H
 
 
 

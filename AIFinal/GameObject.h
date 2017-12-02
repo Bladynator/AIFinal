@@ -1,5 +1,4 @@
-#ifndef GAME_OBJECT_H
-#define GAME_OBJECT_H
+#pragma once
 #include <iostream>
 #include "SFML\Graphics.hpp"
 
@@ -17,5 +16,3 @@ public:
 	sf::Texture texture;
 	sf::RectangleShape shape;
 };
-
-#endif // !GAME_OBJECT_H

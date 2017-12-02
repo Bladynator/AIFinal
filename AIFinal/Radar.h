@@ -1,5 +1,4 @@
-#ifndef RADAR_H
-#define RADAR_H
+#pragma once
 class Radar
 {
 public:
@@ -9,5 +8,3 @@ public:
 	void Scan();
 	void Update();
 };
-
-#endif

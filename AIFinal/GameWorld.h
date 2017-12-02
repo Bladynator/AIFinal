@@ -1,5 +1,4 @@
-#ifndef GAME_WORLD_H
-#define GAME_WORLD_H
+#pragma once
 class GameWorld
 {
 public:
@@ -9,5 +8,3 @@ public:
 	void Draw();
 	void Scroll();
 };
-
-#endif // !GAME_WORLD_H

@@ -1,5 +1,4 @@
-#ifndef PLAYER_MISSLE_H
-#define PLAYER_MISSLE_H
+#pragma once
 #include "Missle.h"
 
 class PlayerMissle : public Missle
@@ -11,7 +10,6 @@ public:
 	}
 	~PlayerMissle();
 };
-#endif // !PLAYER_MISSLE_H
 
 
 
