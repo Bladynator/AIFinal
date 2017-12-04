@@ -22,4 +22,5 @@ void InterceptorMissle::Update()
 void InterceptorMissle::Destroy()
 {
 	isActive = false;
+	dynamic_cast<Nest*>(nest)->hasAliveMissle = false;
 }

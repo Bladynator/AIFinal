@@ -7,20 +7,25 @@ Nest::~Nest()
 
 void Nest::Update()
 {
-	GameObject* player = GameController::GetInstance()->GetPlayer();
-	float distance = sqrt(
-		((player->xPos - xPos) * 2) +
-		((player->yPos - yPos) * 2));
-
-	if (distance < 1500) // TODO: based on resolution?
+	if (!hasAliveMissle)
 	{
-		Shoot();
+		GameObject* player = GameController::GetInstance()->GetPlayer();
+		float distance = sqrt(
+			((player->xPos - xPos) * 2) +
+			((player->yPos - yPos) * 2));
+
+		if (distance < 1500) // TODO: based on resolution?
+		{
+			Shoot();
+		}
 	}
 }
 
 void Nest::Shoot()
 {
-	GameController::GetInstance()->GetPool()->GetInterceptorMissle(sf::Vector2f(xPos, yPos), 0);
+	InterceptorMissle* temp = GameController::GetInstance()->GetPool()->GetInterceptorMissle(sf::Vector2f(xPos, yPos), 0);
+	temp->nest = this;
+	hasAliveMissle = true;
 }
 
 void Nest::OnCollision(GameObject* other)

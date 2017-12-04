@@ -17,6 +17,8 @@ public:
 	void Destroy();
 	void Update() override;
 
+	GameObject* nest;
+
 private:
 	sf::Vector2f directionTemp;
 };

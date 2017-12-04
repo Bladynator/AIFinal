@@ -12,7 +12,7 @@ public:
 	~Nest();
 	void Update() override;
 	void Shoot();
-
+	bool hasAliveMissle = false;
 	int hp = 4;
 
 	void OnCollision(GameObject* other) override;
