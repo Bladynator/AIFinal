@@ -1,9 +1,8 @@
 #include "GameController.h"
-#include "Player.h"
-#include "Nest.h"
 
 GameController* GameController::instance;
 ObjectPool* GameController::objectPool;
+GameObject* GameController::player;
 
 GameController::GameController()
 {
@@ -11,7 +10,7 @@ GameController::GameController()
 	// TODO: make gameworld
 	instance = this;
 	// Make Player
-	Player* player = new Player("ship.png", sf::Vector2f(75,50), sf::Vector2f(50,50));
+	player = new Player("ship.png", sf::Vector2f(75,50), sf::Vector2f(50,50));
 	objectPool = new ObjectPool();
 
 	// Make Nests

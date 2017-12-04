@@ -6,7 +6,7 @@ class InterceptorMissle : public Missle
 public:
 	InterceptorMissle(sf::String textureName, sf::Vector2f size, sf::Vector2f spawnLocation) : Missle(textureName, size, spawnLocation)
 	{
-
+		
 	}
 	~InterceptorMissle();
 
@@ -15,9 +15,8 @@ public:
 	void SeekPlayer();
 
 	void Destroy();
-	void Update();
+	void Update() override;
 
 private:
-	//Player* player;
 	sf::Vector2f directionTemp;
 };

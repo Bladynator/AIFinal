@@ -7,14 +7,15 @@ Nest::~Nest()
 
 void Nest::Update()
 {
-	//float distance = sqrt(
-	//	((player->xPos - xPos) * 2) +
-	//	((player->yPos - yPos) * 2));
+	GameObject* player = GameController::GetInstance()->GetPlayer();
+	float distance = sqrt(
+		((player->xPos - xPos) * 2) +
+		((player->yPos - yPos) * 2));
 
-	//if (distance < 500) // TODO: based on resolution?
-	//{
-	//	Shoot();
-	//}
+	if (distance < 1500) // TODO: based on resolution?
+	{
+		Shoot();
+	}
 }
 
 void Nest::Shoot()

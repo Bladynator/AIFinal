@@ -10,6 +10,7 @@ public:
 	{
 		
 	}
+	Player() {};
 	~Player();
 	float velocity;
 	int workersSaved = 0;

@@ -17,5 +17,5 @@ public:
 	float direction;
 
 	void Destroy();
-	void Update();
+	virtual void Update();
 };
