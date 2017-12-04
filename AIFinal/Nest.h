@@ -12,10 +12,15 @@ public:
 	~Nest();
 	void Update() override;
 	void Shoot();
+	void MakePreditor();
 	bool hasAliveMissle = false;
 	int hp = 4;
+	int currentPreditors = 0;
 
 	void OnCollision(GameObject* other) override;
+
+private:
+	int maxPreditors = 5;
 };
 
 

@@ -15,4 +15,6 @@ public:
 
 	void CreateMissle();
 	void CreatePreditor();
+
+	GameObject* nest;
 };

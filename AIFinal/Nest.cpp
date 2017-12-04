@@ -1,5 +1,5 @@
 #include "Nest.h"
-
+#include "Preditor.h"
 
 Nest::~Nest()
 {
@@ -19,6 +19,17 @@ void Nest::Update()
 			Shoot();
 		}
 	}
+	if (currentPreditors < maxPreditors)
+	{
+		MakePreditor();
+		currentPreditors++;
+	}
+}
+
+void Nest::MakePreditor()
+{
+	Preditor* temp = new Preditor("Preditor.png", sf::Vector2f(75, 75), sf::Vector2f(xPos, yPos));
+	temp->nest = this;
 }
 
 void Nest::Shoot()
