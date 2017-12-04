@@ -1,17 +1,21 @@
 #include "GameController.h"
-#include "Player.h"
+
 
 
 GameController* GameController::instance;
 ObjectPool* GameController::objectPool;
+Player* GameController::player;
 
 GameController::GameController()
 {
 	// make collision object
-	// make gameworld
+	
 	instance = this;
-	Player* player = new Player("ship.png", sf::Vector2f(75,50), sf::Vector2f(50,50));
+	player = new Player("ship.png", sf::Vector2f(75,50), sf::Vector2f(50,50));
 	objectPool = new ObjectPool();
+
+	// make gameworld
+	new Nest("Nest.png", sf::Vector2f(50,50), sf::Vector2f(300,300));
 }
 
 void GameController::Update()

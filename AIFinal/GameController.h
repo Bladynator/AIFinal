@@ -6,6 +6,8 @@
 #include "GameWorld.h"
 #include "CollisionDetection.h"
 #include "ObjectPool.h"
+#include "Player.h"
+#include "Nest.h"
 
 using namespace std;
 
@@ -28,6 +30,10 @@ public:
 	{
 		return objectPool;
 	}
+	static Player* GetPlayer()
+	{
+		return player;
+	}
 	void Update();
 	void Draw(sf::RenderWindow &window);
 
@@ -37,6 +43,7 @@ private:
 	static GameWorld* world;
 	static CollisionDetection* collision;
 	static ObjectPool* objectPool;
+	static Player* player;
 
 };
 

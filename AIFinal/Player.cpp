@@ -56,3 +56,15 @@ void Player::Update()
 	Movement();
 	Shoot();
 }
+
+void Player::OnCollision(GameObject* other)
+{
+	if (typeid(*other) == typeid(InterceptorMissle))
+	{
+		hp -= 1;
+		if (hp <= 0)
+		{
+			Player::~Player();
+		}
+	}
+};
