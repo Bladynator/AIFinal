@@ -34,6 +34,6 @@ void GameObject::HandleEvent() {
 
 }
 
-void GameObject::OnCollision(GameObject other) {
+void GameObject::OnCollision(GameObject* other) {
 
 }

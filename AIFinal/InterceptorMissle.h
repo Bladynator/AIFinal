@@ -11,5 +11,13 @@ public:
 	~InterceptorMissle();
 
 	float lifeTime;
+	float myRotation;
 	void SeekPlayer();
+
+	void Destroy();
+	void Update();
+
+private:
+	//Player* player;
+	sf::Vector2f directionTemp;
 };

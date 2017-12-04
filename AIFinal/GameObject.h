@@ -9,10 +9,12 @@ public:
 	GameObject();
 	~GameObject();
 	bool isActive = true;
+	float xPos = 0;
+	float yPos = 0;
 	virtual void Update();
 	virtual void Draw(sf::RenderWindow &window);
 	virtual void HandleEvent();
-	virtual void OnCollision(GameObject other);
+	virtual void OnCollision(GameObject* other);
 	sf::Texture texture;
 	sf::RectangleShape shape;
 };

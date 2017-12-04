@@ -1,5 +1,6 @@
 #pragma once
 #include "NPC.h"
+#include "GameController.h"
 
 class Nest : public NPC
 {
@@ -9,6 +10,12 @@ public:
 
 	}
 	~Nest();
+	void Update() override;
+	void Shoot();
+
+	int hp = 4;
+
+	void OnCollision(GameObject* other) override;
 };
 
 

@@ -15,18 +15,16 @@ public:
 	int workersSaved = 0;
 	float shootTimer;
 	float shootDelay;
+	int hp = 5;
 
 	void Shoot();
 	void Movement();
 	void Update() override;
-
-	//sf::Vector2f position = sf::Vector2f(0, 0);
-	float xPos = 0;
-	float yPos = 0;
+	void OnCollision(GameObject* other) override;
+	
 	float xVel = 0;
 	float yVel = 0;
 	float orientation = 0;
-	//sf::Vector2f velocity = sf::Vector2f(0, 0);
 	float rotation = 0;
 	const float maxSpeed = 0.2f;
 	const float maxRotation = 0.03f;
