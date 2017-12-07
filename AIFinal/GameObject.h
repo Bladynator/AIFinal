@@ -11,6 +11,8 @@ public:
 	bool isActive = true;
 	float xPos = 0;
 	float yPos = 0;
+	float width = 0;
+	float height = 0;
 	virtual void Update();
 	virtual void Draw(sf::RenderWindow &window);
 	virtual void HandleEvent();

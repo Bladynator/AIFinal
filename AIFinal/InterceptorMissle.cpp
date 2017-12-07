@@ -24,3 +24,12 @@ void InterceptorMissle::Destroy()
 	isActive = false;
 	dynamic_cast<Nest*>(nest)->hasAliveMissle = false;
 }
+
+void InterceptorMissle::OnCollision(GameObject* other)
+{
+	if (typeid(*other) == typeid(Player))
+	{
+		dynamic_cast<Player*>(other)->hp -= 1;
+		Destroy();
+	}
+}

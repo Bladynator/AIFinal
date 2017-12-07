@@ -15,6 +15,7 @@ public:
 	void SeekPlayer();
 
 	void Destroy();
+	void OnCollision(GameObject* other) override;
 	void Update() override;
 
 	GameObject* nest;

@@ -10,6 +10,8 @@ GameObject::GameObject(sf::String textureName, sf::Vector2f size, sf::Vector2f s
 	shape.move(sf::Vector2f(spawnLocation.x, spawnLocation.y));
 	xPos = spawnLocation.x;
 	yPos = spawnLocation.y;
+	width = size.x;
+	height = size.y;
 	if (!texture.loadFromFile(textureName))
 		std::cout << "error";
 	shape.setTexture(&texture, false);

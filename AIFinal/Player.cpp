@@ -64,7 +64,8 @@ void Player::OnCollision(GameObject* other)
 		hp -= 1;
 		if (hp <= 0)
 		{
-			Player::~Player();
+			isActive = false;
+			//Player::~Player();
 		}
 	}
 }

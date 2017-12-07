@@ -3,10 +3,13 @@
 GameController* GameController::instance;
 ObjectPool* GameController::objectPool;
 GameObject* GameController::player;
+CollisionDetection* GameController::collision;
 
 GameController::GameController()
 {
-	// TODO: make collision object
+	// Make collision object
+	collision = new CollisionDetection();
+
 	// TODO: make gameworld
 	instance = this;
 	// Make Player
@@ -32,10 +35,8 @@ void GameController::Update()
 		}
 	}
 
-	// check all Collisions
-
-
-	// update/scroll gameworld
+	// Check all Collisions
+	collision->Update(allObjects);
 	
 }
 
