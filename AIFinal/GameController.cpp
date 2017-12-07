@@ -15,6 +15,11 @@ GameController::GameController()
 
 	// Make Nests
 	new Nest("Nest.png", sf::Vector2f(50, 50), sf::Vector2f(300, 300));
+
+	// Place PowerUps
+	new PowerUp("PowerUp.png", sf::Vector2f(30, 30), sf::Vector2f(500, 500));
+	new PowerUp("PowerUp.png", sf::Vector2f(30, 30), sf::Vector2f(800, 800));
+	new PowerUp("PowerUp.png", sf::Vector2f(30, 30), sf::Vector2f(400, 1000));
 }
 
 void GameController::Update()

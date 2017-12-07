@@ -8,6 +8,7 @@
 #include "ObjectPool.h"
 #include "Player.h"
 #include "Nest.h"
+#include "PowerUp.h"
 
 class GameController
 {

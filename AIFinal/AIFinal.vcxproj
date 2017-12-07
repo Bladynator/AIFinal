@@ -156,6 +156,7 @@
     <ClInclude Include="ObjectPool.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerMissle.h" />
+    <ClInclude Include="PowerUp.h" />
     <ClInclude Include="Preditor.h" />
     <ClInclude Include="Radar.h" />
     <ClInclude Include="SweeperBoid.h" />
@@ -176,6 +177,7 @@
     <ClCompile Include="ObjectPool.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerMissle.cpp" />
+    <ClCompile Include="PowerUp.cpp" />
     <ClCompile Include="Preditor.cpp" />
     <ClCompile Include="Radar.cpp" />
     <ClCompile Include="SweeperBoid.cpp" />
