@@ -10,6 +10,10 @@ int main()
 	sf::RenderWindow window(sf::VideoMode(800, 600), "SpaceSavers");
 	GameController * gameController = new GameController();
 
+	sf::View followPlayer;
+	followPlayer.setCenter(400, 300);
+	followPlayer.setSize(800, 600);
+
 	while (window.isOpen())
 	{
 		sf::Event windowEvent;
@@ -20,8 +24,16 @@ int main()
 				window.close();
 			}
 		}
+
+		// Main Update Loop
 		gameController->Update();
 		window.clear(sf::Color::Black);
+
+		// Camera follow player
+		window.setView(followPlayer);
+		followPlayer.setCenter(gameController->GetPlayer()->xPos, gameController->GetPlayer()->yPos);
+
+		// Main Draw loop
 		gameController->Draw(window);
 		window.display();
 	}

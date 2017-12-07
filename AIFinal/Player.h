@@ -27,10 +27,10 @@ public:
 	float yVel = 0;
 	float orientation = 0;
 	float rotation = 0;
-	const float maxSpeed = 0.2f;
-	const float maxRotation = 0.03f;
-	const float velocityIncreasePlayer = 0.0002f;
-	const float rotationIncreasePlayer = 0.0002f;
+	const float maxSpeed = 0.15f;
+	const float maxRotation = 0.02f;
+	const float velocityIncreasePlayer = 0.0001f;
+	const float rotationIncreasePlayer = 0.0001f;
 
 	bool keyIsPressed = false;
 
