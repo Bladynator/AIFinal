@@ -35,13 +35,14 @@ int main()
 		gameController->Update();
 		window.clear(sf::Color::Black);
 
+		// Minimap/radar
+		minimapView.setViewport(sf::FloatRect(0.75f, 0, 0.25f, 0.25f));
+		window.setView(minimapView);
+		gameController->Draw(window);
+
 		// Camera follow player
 		window.setView(followPlayer);
 		followPlayer.setCenter(gameController->GetPlayer()->xPos, gameController->GetPlayer()->yPos);
-
-		// Minimap/radar
-		minimapView.setViewport(sf::FloatRect(0.75f, 0, 0.25f, 0.25f));
-		//window.setView(minimapView);
 
 		// Main Draw loop
 		gameController->Draw(window);
