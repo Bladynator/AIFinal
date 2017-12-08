@@ -6,7 +6,11 @@ Worker::~Worker()
 
 
 void Worker::Update() {
-	Wander();
+	if (!HasReachedDestination())
+	{
+		Wander();
+
+	}
 	
 	//If collision with the player
 	//Then destroy instance of itself
@@ -22,14 +26,13 @@ void Worker::Wander() {
 	if (!HasReachedDestination())
 	{
 		//Move the Worker towards the target
-		if (xPos >= randomXPos)
+		if (xPos > randomXPos) {
 			xPos += xVel;
-		else
-			xPos -= xVel;
-		if (yPos >= randomYPos)
+		}
+		
+		if (yPos > randomYPos) {
 			yPos += yVel;
-		else
-			yPos -= yVel;
+		}
 		//Rotate the worker
 		orientation += rotation;
 		//Calculate the position based on the rotation
@@ -41,6 +44,8 @@ void Worker::Wander() {
 		//Finally, sets the new position and rotation in the shape
 		shape.setPosition(sf::Vector2f(xPos, yPos));
 		shape.setRotation(orientation);
+		std::cout << xPos << std::endl;
+		std::cout << yPos << std::endl;
 
 	}
 	else {

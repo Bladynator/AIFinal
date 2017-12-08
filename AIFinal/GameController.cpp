@@ -2,6 +2,7 @@
 #include "CollisionDetection.h"
 #include "GameWorld.h"
 #include "Player.h"
+#include "Worker.h"
 
 GameController* GameController::instance;
 
@@ -12,7 +13,7 @@ GameController::GameController()
 	// make gameworld
 	instance = this;
 	Player* player = new Player("ship.png", sf::Vector2f(75,50), sf::Vector2f(50,50));
-	
+	Worker* worker = new Worker("worker.png", sf::Vector2f(75, 50), sf::Vector2f(50, 50));
 
 }
 
